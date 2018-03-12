@@ -12,7 +12,7 @@ Discourse::Application.configure do
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -23,7 +23,7 @@ Discourse::Application.configure do
   # Don't Digest assets, makes debugging uglier
   config.assets.digest = false
 
-  config.assets.debug = false
+  config.assets.debug = true
 
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
@@ -32,7 +32,7 @@ Discourse::Application.configure do
   config.handlebars.precompile = false
 
   # we recommend you use mailcatcher https://github.com/sj26/mailcatcher
-  config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+  config.action_mailer.smtp_settings = { address: "mail", port: 1025 }
 
   config.action_mailer.raise_delivery_errors = true
 
